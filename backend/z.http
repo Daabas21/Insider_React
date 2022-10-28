@@ -1,0 +1,54 @@
+POST http://localhost:5000/login
+content-type: application/json
+
+{
+    "username":"saleh",
+    "password":"1234"
+}
+
+###
+GET  http://localhost:5000/api/users/1
+
+###
+Get http://localhost:5000/api/games
+
+###
+Get http://localhost:5000/api/games/1
+
+###
+POST http://localhost:5000/api/games/
+Content-Type: application/json
+
+{
+    "game": "004"
+}
+
+###
+PATCH  http://localhost:5000/api/users/6
+Content-Type: application/json
+
+{
+    "role": "master",
+    "games_id": 2
+}
+
+###
+POST http://localhost:5000/api/messages
+Content-Type: application/json
+
+{
+    "message" : "this is not private",
+    "private" : false,
+    "game_id" : 2
+}
+
+###
+DELETE  http://localhost:5000/api/messages/2
+
+###
+PATCH  http://localhost:5000/api/games/1
+Content-Type: application/json
+
+{
+    "active": true
+}
